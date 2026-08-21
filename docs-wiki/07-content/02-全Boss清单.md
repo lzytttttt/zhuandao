@@ -22,11 +22,11 @@
 
 | id | name | sys | domain | hp | atk | armor | phases | moves |
 |---|---|---|---|---|---|---|---|---|
-| boss_huyan | 黑风寨主·呼延豹 | 刚 | 1 | 600 | 20 | 0 | 2 | [slash, summon_minion, jump_slam, rage] |
-| boss_baihe | 衡岚掌门·白鹤真人 | 风 | 2 | 1200 | 28 | 40 | 3 | [sword_beam, guard_stance, swallow_dash, qi_wall, sword_rain] |
-| boss_aoshi | 沧澜龙王·敖十三 | 水 | 3 | 1800 | 32 | 30 | 3 | [water_barrage, poison_ring, vortex_pull, summon_pirate, tidal_wave] |
-| boss_helian | 孤城刀魔·赫连霸 | 刚 | 4 | 2600 | 40 | 100 | 3 | [great_slash, charge, stomp, armor_field, triple_charge, armor_break] |
-| boss_jianwuji | 前任武林至尊·剑无极 | 玄 | 5 | 3800 | 45 | 60 | 3 | [blade_clash, chase_slash, mirror_style, clash_burst, ultimate_field, blade_tomb] |
+| boss_huyan | 黑风寨主·呼延豹 | 刚 | 1 | 1400 | 20 | 0 | 2 | [slash, summon_minion, jump_slam, rage] |
+| boss_baihe | 衡岚掌门·白鹤真人 | 风 | 2 | 2000 | 28 | 40 | 3 | [sword_beam, guard_stance, swallow_dash, qi_wall, sword_rain] |
+| boss_aoshi | 沧澜龙王·敖十三 | 水 | 3 | 5000 | 32 | 30 | 3 | [water_barrage, poison_ring, vortex_pull, summon_pirate, tidal_wave] |
+| boss_helian | 孤城刀魔·赫连霸 | 刚 | 4 | 6000 | 40 | 100 | 3 | [great_slash, charge, stomp, armor_field, triple_charge, armor_break] |
+| boss_jianwuji | 前任武林至尊·剑无极 | 玄 | 5 | 20000 | 45 | 60 | 3 | [blade_clash, chase_slash, mirror_style, clash_burst, ultimate_field, blade_tomb] |
 
 ## 三、技能定义表
 
@@ -63,11 +63,13 @@
 
 | id | 首通 | 重复 |
 |---|---|---|
-| boss_huyan | 声望 200 + 蓝刀×1 + gang×3 + 30 金 | 声望 60 + gang×1 + 15 金 |
-| boss_baihe | 声望 350 + 蓝刀×1 + gang×5 + 40 金 | 声望 100 + gang×2 + 20 金 |
-| boss_aoshi | 声望 500 + 紫刀×1 + han×5 + 50 金 | 声望 150 + han×2 + 25 金 |
-| boss_helian | 声望 750 + 紫刀×1 + jin×5 + 60 金 | 声望 200 + jin×2 + 30 金 |
-| boss_jianwuji | 声望 1500 + 橙刀自选 + yun×5 + 100 金 + 称号 | 声望 300 + yun×2 + 50 金 |
+| boss_huyan | 声望 +60 + 蓝刀×1 + gang×3 + 30 金 | 声望 +20 + gang×1 + 15 金 |
+| boss_baihe | 声望 +90 + 蓝刀×1 + gang×5 + 40 金 | 声望 +30 + gang×2 + 20 金 |
+| boss_aoshi | 声望 +150 + 紫刀×1 + han×5 + 50 金 | 声望 +50 + han×2 + 25 金 |
+| boss_helian | 声望 +250 + 紫刀×1 + jin×5 + 60 金 | 声望 +80 + jin×2 + 30 金 |
+| boss_jianwuji | 声望 +350 + 橙刀自选 + yun×5 + 100 金 + 称号 | 声望 +120 + yun×2 + 50 金 |
+
+> v1.3：Boss 首通声望下调（原 200/350/500/750/1500 跳级），目标**正常打完一整个域 ≈ 刚刚触及下一域门槛**。普通怪 +1、节点 +5、精英 +10、事件 +50~200 保留。
 
 ## 五、Boss 战前对白（一句话，战前演出 2s）
 
@@ -83,5 +85,6 @@
 
 - [x] 5 个 = 五域各一（目标达成）
 - [x] 技能前摇全部 ≥0.5s（走位红线）
-- [x] 血量曲线 600→3800 匹配 DPS 自检表区间
+- [x] v1.3 血量按新 TTK 反推（1400/2000/5000/6000/20000），配合护甲/DR 有效血量落在 60-150s 区间
+- [x] v1.3 首通声望下调（+60/90/150/250/350），正常打完一域 ≈ 触及下一域门槛
 - [x] 剑无极镜像机制与 [流派](../04-build/02-流派build示范.md) 六系联动（mirror_style 读取玩家主系）

@@ -1,0 +1,6 @@
+# IDE / CodeBuddy project data
+.codebuddy/
+
+# OS
+.DS_Store
+Thumbs.db
