@@ -1,6 +1,7 @@
+node_modules/
+dist/
+*.local
+.DS_Store
+
 # IDE / CodeBuddy project data
 .codebuddy/
-
-# OS
-.DS_Store
-Thumbs.db
